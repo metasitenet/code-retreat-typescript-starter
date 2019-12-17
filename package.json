@@ -1,0 +1,57 @@
+{
+    "name": "code-retreat-typescript",
+    "description": "Typescript starter project for Metasite 2019 Code Retreat",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+        "start:watch": "nodemon",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch"
+    },
+    "devDependencies": {
+        "@types/chance": "^1.0.7",
+        "@types/jest": "^24.0.23",
+        "@types/node": "^12.12.19",
+        "nodemon": "^2.0.2"
+    },
+    "dependencies": {
+        "chance": "^1.1.4",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.2.0",
+        "ts-node": "^8.5.4",
+        "typescript": "^3.7.3"
+    },
+    "jest": {
+        "globals": {
+            "ts-jest": {
+                "tsConfig": "tsconfig.json"
+            }
+        },
+        "moduleFileExtensions": [
+            "ts",
+            "js",
+            "json"
+        ],
+        "transform": {
+            "^.+\\.(ts|tsx)$": "ts-jest"
+        },
+        "testMatch": [
+            "**/src/**/*.spec.(ts|js)"
+        ],
+        "testEnvironment": "node"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "**/*.test.ts",
+            "**/*.spec.ts",
+            ".git",
+            "node_modules"
+        ],
+        "watch": [
+            "src"
+        ],
+        "exec": "npm start",
+        "ext": "ts"
+    }
+}
