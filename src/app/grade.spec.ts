@@ -1,4 +1,4 @@
-import { rateGrade } from "./utilities";
+import { rateGrade } from "./grade";
 
 describe("#rateGrade", () => {
   it('should say "Well done" if grade exceeds 8', () => {

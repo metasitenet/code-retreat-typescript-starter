@@ -1,11 +1,11 @@
 export class Square {
   constructor(private size: number) {}
 
-  area() {
+  get area() {
     return this.size * this.size;
   }
 
-  perimeter() {
+  get perimeter() {
     return this.size * 4;
   }
 }
